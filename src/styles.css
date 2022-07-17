@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+body, html {
+      background-color: #0c181c !important;
+}
+
+.todoapp h1 {
+      color: #c0374d !important;
+}
