@@ -23,7 +23,20 @@ const _todoReducer = createReducer(
       return todo;
      
     })
-  })
+  }),
+  on(actions.editar, (state, {id, texto}) => {
+    return state.map(todo => {
+
+      if (todo.id === id) {
+        return {
+          ...todo,
+          texto: texto
+        }
+      }
+      return todo;
+     
+    })
+  }),
 );
 
 export function todoReducer (state: any, action: any) {
