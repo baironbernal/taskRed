@@ -6,13 +6,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 //NgRx
 import { StoreModule } from '@ngrx/store';
-import { todoReducer } from './todos/todo.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { TodoModule } from './todos/todo.module';
 import { FooterComponent } from './footer/footer.component';
+import { appReducers } from './app.reducer';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     ReactiveFormsModule,
     TodoModule,
-    StoreModule.forRoot({ todos: todoReducer },{
+    StoreModule.forRoot(appReducers,{
       runtimeChecks: {
         strictStateImmutability: false,
         strictActionImmutability: false,

@@ -7,7 +7,7 @@
         type="checkbox" >
 
         <label (dblclick)="edit()">{{ task?.texto }}</label>
-        <button class="destroy"></button>
+        <button class="destroy" (click)="delete()"></button>
       </div>
       <input class="edit"
               type="text"

@@ -39,8 +39,6 @@ export class TodoItemComponent implements OnInit {
       }, 1)
   }
 
-
-
   endEdit() { 
     this.editing = false;
 
@@ -51,5 +49,9 @@ export class TodoItemComponent implements OnInit {
       id: this.task!.id, 
       texto: this.txtInput?.value 
     }));
+  }
+
+  delete() {
+    this.store.dispatch(actions.borrar({ id: this.task!.id }))
   }
 }
