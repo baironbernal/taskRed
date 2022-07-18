@@ -1,4 +1,9 @@
 <header class="header">
       <h1>TaskRed</h1>
-      <input class="new-todo" placeholder="Add task inside" autofocus>
+      <input class="new-todo" 
+            placeholder="Add task inside" 
+            [formControl]="txtInput"  
+            autofocus 
+            (keyup.enter)="addTodo()"
+      >
 </header>
