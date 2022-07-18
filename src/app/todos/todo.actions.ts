@@ -1,5 +1,6 @@
 import { createAction, props } from "@ngrx/store";
 
+export const clearCompleted = createAction('TODO Limpiar items completados');
 export const crear = createAction(
       'TODO Crea Tarea o Todo',
       props<{ texto: string }>()
@@ -23,3 +24,4 @@ export const toogleAll = createAction(
       'TODO Completar todos los TODO',
       props<{ completado: boolean }>()
 );
+
